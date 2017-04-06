@@ -16,7 +16,7 @@
        <th>发表时间</th>
      </tr>
    </thead>
-   <tbody> 
+   <tbody>
      <% @posts.each do |post| %>
        <tr>
          <td><%= post.content %></td>
@@ -26,5 +26,7 @@
      <% end %>
    </tbody>
  </table>
-
+   <div class="text-center">
+        <%= will_paginate @posts %>
+   </div>
 </div>
